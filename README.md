@@ -43,6 +43,7 @@ To maintain an organized approach to managing dotfiles, I've structured my file 
 ### Tmux
 
 - **Tmux:** Version 1.9 or greater
+- **Tmux Plugin Manage:** [TPM](https://github.com/tmux-plugins/tpm) installed at `~/.tmux/plugins/tpm/tpm`
 
 ## Installation
 
@@ -68,10 +69,12 @@ To maintain an organized approach to managing dotfiles, I've structured my file 
 
 ## Included Configurations
 
-### Neovim
+### Neovim Config
 
 This Neovim configuration is based on the [LazyVim](https://www.lazyvim.org/) package, customized to fit my needs
 
-### Tmux
+### Tmux Config
 
 My Tmux setup utilizes the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) with the Catpuccino theme and customized keybindings.
+
+Press Prefix (C-a) + I (capital i, as in Install) to fetch the plugins.
