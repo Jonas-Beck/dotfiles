@@ -21,8 +21,9 @@ To maintain an organized approach to managing dotfiles, I've structured my file 
   - [Tmux](#tmux)
 - [Installation](#installation)
 - [Included Configurations](#included-configurations)
-  - [Neovim](#neovim)
-  - [Tmux](#tmux)
+  - [Neovim](#neovim-config)
+  - [Tmux](#tmux-config)
+  - [Starship](#starship-config)
   <!--toc:end-->
 
 ## Requirements
@@ -78,3 +79,7 @@ This Neovim configuration is based on the [LazyVim](https://www.lazyvim.org/) pa
 My Tmux setup utilizes the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) with the Catpuccino theme and customized keybindings.
 
 Press Prefix (C-a) + I (capital i, as in Install) to fetch the plugins.
+
+### Starship Config
+
+Currently i am using [Omerxx's starship config](https://github.com/omerxx/dotfiles)
