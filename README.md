@@ -21,9 +21,10 @@ To maintain an organized approach to managing dotfiles, I've structured my file 
   - [Tmux](#tmux)
 - [Installation](#installation)
 - [Included Configurations](#included-configurations)
-  - [Neovim](#neovim-config)
-  - [Tmux](#tmux-config)
-  - [Starship](#starship-config)
+  - [Neovim Config](#neovim-config)
+  - [Tmux Config](#tmux-config)
+  - [Starship Config](#starship-config)
+  - [AeroSpace Config](#aerospace-config)
   <!--toc:end-->
 
 ## Requirements
@@ -83,3 +84,7 @@ Press Prefix (C-a) + I (capital i, as in Install) to fetch the plugins.
 ### Starship Config
 
 Currently i am using [Omerxx's starship config](https://github.com/omerxx/dotfiles)
+
+### AeroSpace Config
+
+Currently i am using the default AeroSpace config with JankyBorders
