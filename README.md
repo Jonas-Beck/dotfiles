@@ -25,6 +25,7 @@ To maintain an organized approach to managing dotfiles, I've structured my file 
   - [Tmux Config](#tmux-config)
   - [Starship Config](#starship-config)
   - [AeroSpace Config](#aerospace-config)
+  - [Lazygit Config](#lazygit-config)
   <!--toc:end-->
 
 ## Requirements
@@ -88,3 +89,7 @@ Currently i am using [Omerxx's starship config](https://github.com/omerxx/dotfil
 ### AeroSpace Config
 
 Currently i am using the default AeroSpace config with JankyBorders
+
+### Lazygit Config
+
+Custom Lazygit commands for creating branches and commits following Conventional Commits
