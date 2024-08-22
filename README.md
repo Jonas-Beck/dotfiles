@@ -92,4 +92,4 @@ Currently i am using the default AeroSpace config with JankyBorders
 
 ### Lazygit Config
 
-Custom Lazygit commands for creating branches and commits following Conventional Commits
+Custom Lazygit commands for creating commits following Conventional Commits
