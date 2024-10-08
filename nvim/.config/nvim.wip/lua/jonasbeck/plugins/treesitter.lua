@@ -39,7 +39,7 @@ return {
 				"gitignore",
 				"vimdoc",
 				"go",
-				"gomad",
+				"gomod",
 				"gowork",
 				"gosum",
 			},
