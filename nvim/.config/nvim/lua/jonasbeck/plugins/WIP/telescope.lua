@@ -14,25 +14,6 @@ return {
 			local actions = require("telescope.actions")
 			local builtin = require("telescope.builtin")
 
-			telescope.setup({
-				default = {
-					mappings = {
-						i = {
-							["<C-k>"] = actions.move_selection_previous, -- move to prev result
-							["<C-j>"] = actions.move_selection_next, -- move to next result
-						},
-					},
-				},
-				extensions = {
-					["ui-select"] = {
-						require("telescope.themes").get_dropdown({}),
-					},
-				},
-			})
-
-			telescope.load_extension("ui-select")
-			telescope.load_extension("fzf")
-
 			-- set keymaps
 			local keymap = vim.keymap -- for conciseness
 
