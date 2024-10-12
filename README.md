@@ -26,6 +26,7 @@ To maintain an organized approach to managing dotfiles, I've structured my file 
   - [Starship Config](#starship-config)
   - [AeroSpace Config](#aerospace-config)
   - [Lazygit Config](#lazygit-config)
+  - [Alacritty Config](#alacritty-config)
   <!--toc:end-->
 
 ## Requirements
@@ -78,7 +79,7 @@ This Neovim configuration is based on the [LazyVim](https://www.lazyvim.org/) pa
 
 ### Tmux Config
 
-My Tmux setup utilizes the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) with the Catpuccino theme and customized keybindings.
+My Tmux setup utilizes the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) with the Catppuccin theme and customized keybindings.
 
 Press Prefix (C-a) + I (capital i, as in Install) to fetch the plugins.
 
@@ -93,3 +94,7 @@ Currently i am using the default AeroSpace config with JankyBorders
 ### Lazygit Config
 
 Custom Lazygit commands for creating commits and branches following Conventional Commits
+
+### Alacritty Config
+
+Alacritty terminal with Catppuccin Mocha theme and JetBrains Nerd Font Mono
