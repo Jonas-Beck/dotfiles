@@ -36,12 +36,57 @@ return {
 		},
 		-- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 		-- adjusts spacing to ensure icons are aligned
-		nerd_font_variant = "normal",
+		nerd_font_variant = "mono",
 
 		-- experimental auto-brackets support
 		-- accept = { auto_brackets = { enabled = true } }
 
 		-- experimental signature help support
 		-- trigger = { signature_help = { enabled = true } }
+		windows = {
+			documentation = {
+				min_width = 15,
+				max_width = 50,
+				max_height = 15,
+				border = vim.g.borderStyle,
+				auto_show = true,
+				auto_show_delay_ms = 200,
+			},
+			autocomplete = {
+				min_width = 10,
+				max_height = 10,
+				border = vim.g.borderStyle,
+				-- selection = "auto_insert", -- PENDING https://github.com/Saghen/blink.cmp/issues/117
+				selection = "preselect",
+				cycle = { from_top = false }, -- cycle at bottom, but not at the top
+			},
+		},
+		kind_icons = {
+			Text = "",
+			Method = "󰊕",
+			Function = "󰊕",
+			Constructor = "",
+			Field = "󰇽",
+			Variable = "󰂡",
+			Class = "⬟",
+			Interface = "",
+			Module = "",
+			Property = "󰜢",
+			Unit = "",
+			Value = "󰎠",
+			Enum = "",
+			Keyword = "󰌋",
+			Snippet = "󰒕",
+			Color = "󰏘",
+			Reference = "",
+			File = "󰉋",
+			Folder = "󰉋",
+			EnumMember = "",
+			Constant = "󰏿",
+			Struct = "",
+			Event = "",
+			Operator = "󰆕",
+			TypeParameter = "󰅲",
+		},
 	},
 }
