@@ -1,0 +1,11 @@
+# Install formula stow with 'brew' in default path
+- name: Install stow using Homebrew
+  community.general.homebrew:
+    name: stow
+    state: present
+
+# Install Jetbrains Mono Nerd Font brew cask
+- name: Install Jetbrain Mono Nerd Font using Homebrew
+  community.general.homebrew:
+    name: homebrew/cask/font-jetbrains-mono-nerd-font
+    state: present
