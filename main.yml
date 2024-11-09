@@ -5,7 +5,7 @@
   tasks:
     - name: Gather all roles in the roles directory
       ansible.builtin.find:
-        paths: "~/dotfiles/ansible/roles" # Adjust the path if your roles are elsewhere
+        paths: "~/dotfiles/roles"
         file_type: directory
         depth: 1
       register: roles_directory
