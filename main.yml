@@ -1,6 +1,7 @@
 ---
 - name: Bootstrap dotfiles
-  hosts: local
+  hosts: localhost
+  connection: local
 
   tasks:
     - name: Gather all roles in the roles directory
