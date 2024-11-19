@@ -1,0 +1,5 @@
+---
+- name: "Jetbrains Mono Nerd Font | MacOSX | Install"
+  community.general.homebrew_cask:
+    name: font-jetbrains-mono-nerd-font
+    state: present
