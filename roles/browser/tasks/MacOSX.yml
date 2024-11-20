@@ -1,0 +1,5 @@
+---
+- name: "Arc | MacOSX | Install"
+  community.general.homebrew_cask:
+    name: arc
+    state: present
