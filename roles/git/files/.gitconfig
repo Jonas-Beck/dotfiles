@@ -3,6 +3,7 @@
 	name = Jonas Beck
 [core]
 	autocrlf = input
+	excludesFile = ~/.gitignore
 
 [includeIf "gitdir:~/Developer/VELUX/"]
     path = ~/Developer/VELUX/.gitconfig

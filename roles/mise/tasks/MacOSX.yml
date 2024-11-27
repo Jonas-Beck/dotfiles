@@ -1,0 +1,9 @@
+---
+- name: Install mise if not already installed
+  ansible.builtin.shell: |
+    set -e -o pipefail
+    curl https://mise.run | sh
+  args:
+    creates: "{{ ansible_env.HOME }}/.local/bin/mise"
+  register: mise_install_result
+  changed_when: mise_install_result.rc == 0
