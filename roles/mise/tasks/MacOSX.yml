@@ -1,9 +1,12 @@
----
-- name: Install mise if not already installed
+- name: Check if mise is installed
+  ansible.builtin.command: which mise
+  register: mise_check
+  changed_when: false
+  ignore_errors: true
+
+- name: Install mise
   ansible.builtin.shell: |
-    set -e -o pipefail
     curl https://mise.run | sh
+  when: mise_check.rc != 0
   args:
     creates: "{{ ansible_env.HOME }}/.local/bin/mise"
-  register: mise_install_result
-  changed_when: mise_install_result.rc == 0
