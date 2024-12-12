@@ -1,0 +1,5 @@
+---
+- name: "direnv | MacOSX | Install"
+  community.general.homebrew:
+    name: direnv
+    state: present
