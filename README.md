@@ -2,99 +2,74 @@
 
 ## Overview
 
-This repository contains my personal dotfiles, including configurations for various tools and applications that I use on a daily basis. Feel free to explore and adapt them to suit your own preferences.
+This repository automates the setup of a personalized development environment using **Ansible**. It streamlines the installation, configuration, and updates of development tools and system preferences across machines.
 
-## File Structure
+## Features
 
-To maintain an organized approach to managing dotfiles, I've structured my file system with separate folders for each program's configurations.
+- 🚀 One-command installation and setup
+- 🔄 Automated system configuration
+- ⚙️ Ansible for configuration management
+- 📦 Automated package installation
 
-## Table of Contents
+## Quick Start
 
-<!--toc:start-->
+### One-Command Installation
 
-- [Overview](#overview)
-- [File Structure](#file-structure)
-- [Table of Contents](#table-of-contents)
-- [Requirements](#requirements)
-  - [General](#general)
-  - [Neovim](#neovim)
-  - [Tmux](#tmux)
-- [Installation](#installation)
-- [Included Configurations](#included-configurations)
-  - [Neovim Config](#neovim-config)
-  - [Tmux Config](#tmux-config)
-  - [Starship Config](#starship-config)
-  - [AeroSpace Config](#aerospace-config)
-  - [Lazygit Config](#lazygit-config)
-  - [Alacritty Config](#alacritty-config)
-  <!--toc:end-->
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonas-beck/dotfiles/main/bin/dotfiles)"
+```
 
-## Requirements
+This command will:
 
-### General
+1. Install required dependencies
+2. Clone this repository
+3. Run the Ansible playbook to configure your system
 
-- **Git:** Version 2.19.0 or greater to clone repository
-- **Stow:** To symlink all config files
-- **Nerd Font:** Version 3.0 or greater is needed to display some icons.
+## Directory Structure
 
-### Neovim
+```
+.
+├── bin/                 # Scripts and executables
+│   └── dotfiles         # Main installation script
+├── roles/               # Ansible roles for different configurations
+├── main.yml             # Main Ansible playbook
+└── README.md            # Documentation
+```
 
-- **Neovim:** Version 0.9.0 or greater is required
-- **Lazygit:** Optional but recommended for an easier git interface.
-- **C Compiler:** Required for nvim-treesitter. Ensure you have a C compiler installed.
-- **ripgrep:** For Telescope live grep functionality.
+## Installed Components
 
-### Tmux
+### Core Tools
 
-- **Tmux:** Version 1.9 or greater
-- **Tmux Plugin Manage:** [TPM](https://github.com/tmux-plugins/tpm) installed at `~/.tmux/plugins/tpm/tpm`
+- Neovim - Text Editor
+- Tmux - Terminal Multiplexer
+- Alacritty - Terminal Emulator
+- Starship - Shell Prompt
 
-## Installation
+### Development Tools
 
-1. **Clone the Repository:**
+- Lazygit - Git TUI
+- k9s - Kubernetes TUI
+- Git Configuration (Personal/Work Profiles)
 
-   ```bash
-   git clone https://github.com/jonas-beck/dotfiles.git
-   ```
+### Applications
 
-2. **Navigate to the Repository:**
+- Arc Browser (macOS)
+- Spotify
+- Aerospace - Window Manager (macOS)
 
-   ```bash
-   cd dotfiles
-   ```
+### Fonts
 
-3. **Install Dotfiles Using Stow:**
+- Nerd Fonts Collection
 
-   ```bash
-   stow */ # Symlink everything
+## Supported Operating Systems
 
-   stow nvim # Symlink only nvim config
-   ```
+- **macOS**: Supported ✅
+- **Linux**: Not supported ❌
+- **Windows WSL**: Not supported ❌
 
-## Included Configurations
+## Acknowledgments
 
-### Neovim Config
+Inspired by:
 
-This Neovim configuration is based on the [LazyVim](https://www.lazyvim.org/) package, customized to fit my needs
-
-### Tmux Config
-
-My Tmux setup utilizes the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) with the Catppuccin theme and customized keybindings.
-
-Press Prefix (C-a) + I (capital i, as in Install) to fetch the plugins.
-
-### Starship Config
-
-Currently i am using [Omerxx's starship config](https://github.com/omerxx/dotfiles)
-
-### AeroSpace Config
-
-Currently i am using the default AeroSpace config with JankyBorders
-
-### Lazygit Config
-
-Custom Lazygit commands for creating commits and branches following Conventional Commits
-
-### Alacritty Config
-
-Alacritty terminal with Catppuccin Mocha theme and JetBrains Nerd Font Mono
+- [TechDufus's dotfiles](https://github.com/TechDufus/dotfiles)
+- [ALT-F4-LLC's dotfiles](https://github.com/ALT-F4-LLC/dotfiles)

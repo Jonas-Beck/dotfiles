@@ -1,0 +1,41 @@
+---
+- name: "Aerospace | MacOSX | Install"
+  community.general.homebrew_cask:
+    name: nikitabobko/tap/aerospace
+    state: present
+
+- name: "Aerospace | Config folder"
+  ansible.builtin.file:
+    mode: "0755"
+    path: "{{ ansible_user_dir }}/.config/aerospace"
+    state: directory
+
+- name: "Aerospace | Create symlink to role files/aerospace directory"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/aerospace"
+    dest: "{{ ansible_user_dir }}/.config/aerospace"
+    state: link
+    force: true
+
+- name: "JankyBorders | MacOSX | Tap "
+  community.general.homebrew_tap:
+    name: FelixKratz/formulae
+    state: present
+
+- name: "JankyBorders | MacOSX | Install "
+  community.general.homebrew:
+    name: borders
+    state: present
+
+- name: "JankyBorders | Config folder"
+  ansible.builtin.file:
+    mode: "0755"
+    path: "{{ ansible_user_dir }}/.config/borders"
+    state: directory
+
+- name: "JankyBorders | Create symlink to role files/borders directory"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/borders"
+    dest: "{{ ansible_user_dir }}/.config/borders"
+    state: link
+    force: true
