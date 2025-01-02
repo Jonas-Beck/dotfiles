@@ -21,7 +21,7 @@
 
 - name: "Tmux | Create symlink to role files directory"
   ansible.builtin.file:
-    src: "{{ role_path }}/files/"
-    dest: "{{ ansible_user_dir }}/.config/tmux"
+    src: "{{ role_path }}/files/.tmux.conf"
+    dest: "{{ ansible_user_dir }}/.tmux.conf"
     state: link
     force: true
