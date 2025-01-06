@@ -1,0 +1,5 @@
+---
+- name: "Dagger | MacOSX | Install"
+  community.general.homebrew:
+    name: dagger
+    state: present
