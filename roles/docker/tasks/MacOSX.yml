@@ -1,5 +1,9 @@
 ---
 - name: "Docker | MacOSX | Install"
+  community.general.homebrew:
+    name: docker
+    state: present
+- name: "Rancher | MacOSX | Install"
   community.general.homebrew_cask:
     name: rancher
     state: present
