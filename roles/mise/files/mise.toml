@@ -1,3 +1,5 @@
+# Add anything that should be installed globally in this file
 [tools]
 go = "1.23"
-# Add anything that should be installed globally in this file
+node = "20"
+"npm:prettier" = "latest"
