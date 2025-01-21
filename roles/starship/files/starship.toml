@@ -15,6 +15,11 @@ read_only = " 󰌾"
 
 [docker_context]
 symbol = " "
+only_with_files = false
+
+[kubernetes]
+symbol = '☸ '
+disabled = false
 
 [fossil_branch]
 symbol = " "
