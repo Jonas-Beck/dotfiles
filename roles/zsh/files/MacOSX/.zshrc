@@ -11,6 +11,12 @@ export PATH="~/.rd/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# Open in tmux popup if on tmux, otherwise use --height mode
+export FZF_DEFAULT_OPTS='--height 60% --tmux center,60% '
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Zoxide
 eval "$(zoxide init zsh)"
 
