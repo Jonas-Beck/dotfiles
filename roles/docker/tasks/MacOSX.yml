@@ -3,7 +3,7 @@
   community.general.homebrew:
     name: docker
     state: present
-- name: "Rancher | MacOSX | Install"
-  community.general.homebrew_cask:
-    name: rancher
+- name: "Colima | MacOSX | Install"
+  community.general.homebrew:
+    name: colima
     state: present
