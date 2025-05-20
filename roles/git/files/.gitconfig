@@ -1,5 +1,5 @@
 [user]
-	email = jonasb@outlook.dk
+	email = dev@jonasbeck.dk
 	name = Jonas Beck
 	signingkey = ~/.ssh/id_ed25519.pub
 [core]
