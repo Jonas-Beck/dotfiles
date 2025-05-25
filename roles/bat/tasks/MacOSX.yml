@@ -1,0 +1,5 @@
+---
+- name: "Bat | MacOSX | Install"
+  community.general.homebrew:
+    name: bat
+    state: present

@@ -17,6 +17,8 @@ export FZF_DEFAULT_OPTS='--height 60% --tmux center,60% '
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+alias cat='bat'
+
 # Zoxide
 eval "$(zoxide init zsh)"
 
