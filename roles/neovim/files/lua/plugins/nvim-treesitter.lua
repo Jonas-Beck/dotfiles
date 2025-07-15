@@ -5,6 +5,7 @@ return {
       -- extend default treesitter ensure_installed
       vim.list_extend(opts.ensure_installed, {
         "astro",
+        "pkl",
       })
     end,
   },
