@@ -3,3 +3,8 @@
   community.general.homebrew:
     name: tmux
     state: present
+
+- name: "Sesh | MacOSX | Install"
+  community.general.homebrew:
+    name: sesh
+    state: present
