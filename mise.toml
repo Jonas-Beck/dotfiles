@@ -1,0 +1,78 @@
+[settings]
+dotfiles.root = "~/.dotfiles"
+experimental = true
+
+[dotfiles]
+"~/.config/mise/config.toml" = "~/dotfiles/mise.toml"
+"~/.config/lazygit/config.yml" = "~/dotfiles/lazygit/config.yml"
+"~/.config/starship.toml" = "~/dotfiles/starship/starship.toml"
+# TODO: Install cask and font
+"~/.config/alacritty/alacritty.toml" = "~/dotfiles/alacritty/alacritty.toml"
+"~/.config/k9s/" = "~/dotfiles/k9s/"
+"~/.tmux.conf" = "~/dotfiles/tmux/.tmux.conf"
+"~/.config/karabiner/karabiner.json" = "~/dotfiles/karabiner/karabiner.json"
+"~/.config/nvim/" = "~/dotfiles/nvim/"
+"~/.gitconfig" = "~/dotfiles/git/.gitconfig"
+"~/.gitignore" = "~/dotfiles/git/.gitignore"
+"~/Developer/VELUX/.gitconfig" = "~/dotfiles/git/.gitconfig_work"
+"~/.config/zsh/" = "~/dotfiles/zsh/zsh/"
+"~/.zshrc" = "~/dotfiles/zsh/.zshrc"
+
+[bootstrap.repos]
+# TODO: Look into tpack as binary alternative instead of cloning tpm
+# Potentially with a mise run bootstrap script that would install plugins used by the config file
+"~/.tmux/plugins/tpm" = { url = "https://github.com/tmux-plugins/tpm", ref = "master" }
+# "~/dotfiles" = { url = "https://github.com/Jonas-Beck/dotfiles" }
+
+# TODO: Migrate all Brewfile casks to mise native management
+[bootstrap.hooks]
+pre-packages = [
+  '''
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ -x /opt/homebrew/bin/brew ] || command -v brew >/dev/null 2>&1; then
+	echo "Homebrew already installed; skipping"
+	exit 0
+fi
+
+echo "Installing Homebrew..."
+/bin/bash -c \
+	"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+''',
+  '''
+brew bundle --file=~/dotfiles/brew/Brewfile
+''',
+]
+
+[bootstrap.macos.dock]
+autohide = true
+orientation = "bottom"
+tilesize = 80
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+
+
+[bootstrap.packages]
+"brew:docker" = "latest"
+"brew:dagger" = "latest"
+"brew:fzf" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:helm" = "latest"
+"brew:k9s" = "latest"
+"brew:kind" = "latest"
+"brew:lazygit" = "latest"
+"brew:neovim" = "latest"
+"brew:ripgrep" = "latest"
+"brew:sesh" = "latest"
+"brew:starship" = "latest"
+"brew:tmux" = "latest"
+"brew:tree-sitter-cli" = "latest"
+"brew:yq" = "latest"
+"brew:zoxide" = "latest"
+"brew:bat" = "latest"
+"brew:colima" = "latest"
+"brew:kubernetes-cli" = "latest"
+"brew:direnv" = "latest"
