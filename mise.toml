@@ -21,6 +21,36 @@ experimental = true
 [bootstrap.repos]
 # "~/dotfiles" = { url = "https://github.com/Jonas-Beck/dotfiles" }
 
+
+[tasks.bootstrap]
+description = "Install Tmux Plugins"
+run = "tpack install"
+
+# TODO: Seperate macos specific configs into dedicated files - currently waiting for this to be opt-out in Mise v2027.6.0
+
+[bootstrap.packages]
+"brew:docker" = "latest"
+"brew:dagger" = "latest"
+"brew:fzf" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:helm" = "latest"
+"brew:k9s" = "latest"
+"brew:kind" = "latest"
+"brew:lazygit" = "latest"
+"brew:neovim" = "latest"
+"brew:ripgrep" = "latest"
+"brew:sesh" = "latest"
+"brew:starship" = "latest"
+"brew:tmux" = "latest"
+"brew:tree-sitter-cli" = "latest"
+"brew:yq" = "latest"
+"brew:zoxide" = "latest"
+"brew:bat" = "latest"
+"brew:colima" = "latest"
+"brew:kubernetes-cli" = "latest"
+"brew:direnv" = "latest"
+
 # TODO: Migrate all Brewfile casks to mise native management
 [bootstrap.hooks]
 pre-packages = [
@@ -49,31 +79,3 @@ tilesize = 80
 
 [bootstrap.macos.trackpad]
 tap_to_click = true
-
-[tasks.bootstrap]
-description = "Install Tmux Plugins"
-run = "tpack install"
-
-
-[bootstrap.packages]
-"brew:docker" = "latest"
-"brew:dagger" = "latest"
-"brew:fzf" = "latest"
-"brew:gh" = "latest"
-"brew:git" = "latest"
-"brew:helm" = "latest"
-"brew:k9s" = "latest"
-"brew:kind" = "latest"
-"brew:lazygit" = "latest"
-"brew:neovim" = "latest"
-"brew:ripgrep" = "latest"
-"brew:sesh" = "latest"
-"brew:starship" = "latest"
-"brew:tmux" = "latest"
-"brew:tree-sitter-cli" = "latest"
-"brew:yq" = "latest"
-"brew:zoxide" = "latest"
-"brew:bat" = "latest"
-"brew:colima" = "latest"
-"brew:kubernetes-cli" = "latest"
-"brew:direnv" = "latest"
