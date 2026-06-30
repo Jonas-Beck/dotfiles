@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository automates the setup of a personalized development environment using **Ansible**. It streamlines the installation, configuration, and updates of development tools and system preferences across machines.
+This repository automates the setup of a personalized development environment using **Mise**. It streamlines the installation, configuration, and updates of development tools and system preferences across machines.
 
 ## Features
 
