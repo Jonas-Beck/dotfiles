@@ -30,7 +30,6 @@ run = "tpack install"
 
 [bootstrap.packages]
 "brew:docker" = "latest"
-"brew:dagger" = "latest"
 "brew:fzf" = "latest"
 "brew:gh" = "latest"
 "brew:git" = "latest"
