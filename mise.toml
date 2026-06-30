@@ -19,7 +19,7 @@ experimental = true
 "~/.zshrc" = "~/dotfiles/zsh/.zshrc"
 
 [bootstrap.repos]
-# "~/dotfiles" = { url = "https://github.com/Jonas-Beck/dotfiles" }
+"~/dotfiles" = { url = "https://github.com/Jonas-Beck/dotfiles" }
 
 
 [tasks.bootstrap]
