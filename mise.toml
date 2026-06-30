@@ -2,11 +2,11 @@
 dotfiles.root = "~/.dotfiles"
 experimental = true
 
+
 [dotfiles]
 "~/.config/mise/config.toml" = "~/dotfiles/mise.toml"
 "~/.config/lazygit/config.yml" = "~/dotfiles/lazygit/config.yml"
 "~/.config/starship.toml" = "~/dotfiles/starship/starship.toml"
-# TODO: Install cask and font
 "~/.config/alacritty/alacritty.toml" = "~/dotfiles/alacritty/alacritty.toml"
 "~/.config/k9s/" = "~/dotfiles/k9s/"
 "~/.tmux.conf" = "~/dotfiles/tmux/.tmux.conf"
@@ -19,9 +19,6 @@ experimental = true
 "~/.zshrc" = "~/dotfiles/zsh/.zshrc"
 
 [bootstrap.repos]
-# TODO: Look into tpack as binary alternative instead of cloning tpm
-# Potentially with a mise run bootstrap script that would install plugins used by the config file
-"~/.tmux/plugins/tpm" = { url = "https://github.com/tmux-plugins/tpm", ref = "master" }
 # "~/dotfiles" = { url = "https://github.com/Jonas-Beck/dotfiles" }
 
 # TODO: Migrate all Brewfile casks to mise native management
@@ -52,6 +49,10 @@ tilesize = 80
 
 [bootstrap.macos.trackpad]
 tap_to_click = true
+
+[tasks.bootstrap]
+description = "Install Tmux Plugins"
+run = "tpack install"
 
 
 [bootstrap.packages]

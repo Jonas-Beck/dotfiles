@@ -11,6 +11,7 @@ brew "kyverno"
 brew "pkl-lsp"
 brew "qemu"
 brew "snyk-cli"
+brew "tpack"
 
 cask "alacritty"
 cask "arc"
