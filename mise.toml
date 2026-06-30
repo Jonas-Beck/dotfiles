@@ -49,6 +49,7 @@ run = "tpack install"
 "brew:colima" = "latest"
 "brew:kubernetes-cli" = "latest"
 "brew:direnv" = "latest"
+"brew-cask:copilot-cli" = "latest"
 
 # TODO: Migrate all Brewfile casks to mise native management
 [bootstrap.hooks]
