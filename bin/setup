@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MISE_TOML_URL="https://raw.githubusercontent.com/Jonas-Beck/dotfiles/refs/heads/feature/mise/mise.toml"
+# https://raw.githubusercontent.com/Jonas-Beck/dotfiles/main/mise.toml
+
+cleanup() {
+  if [[ -n "${TMP_DIR:-}" && -d "${TMP_DIR}" ]]; then
+    rm -rf "${TMP_DIR}"
+  fi
+}
+
+trap cleanup EXIT
+
+echo "Installing mise..."
+curl https://mise.run | sh
+
+TMP_DIR="$(mktemp -d)"
+TMP_MISE_TOML="${TMP_DIR}/mise.toml"
+
+echo "Fetching ${MISE_TOML_URL}..."
+curl -fsSL "${MISE_TOML_URL}" -o "${TMP_MISE_TOML}"
+
+echo "Running mise bootstrap..."
+(
+  cd "${TMP_DIR}"
+  mise bootstrap
+)
+
+echo "Bootstrap completed."

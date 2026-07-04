@@ -14,8 +14,6 @@ This repository automates the setup of a personalized development environment us
 
 ### One-Command Installation
 
-TODO: Implement this
-
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonas-beck/dotfiles/main/bin/dotfiles)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonas-beck/dotfiles/main/bin/setup)"
 ```
