@@ -1,5 +1,0 @@
----
-- name: "Lazygit | MacOSX | Install"
-  community.general.homebrew:
-    name: lazygit
-    state: present

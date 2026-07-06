@@ -1,9 +1,0 @@
----
-- name: "Docker | MacOSX | Install"
-  community.general.homebrew:
-    name: docker
-    state: present
-- name: "Colima | MacOSX | Install"
-  community.general.homebrew:
-    name: colima
-    state: present

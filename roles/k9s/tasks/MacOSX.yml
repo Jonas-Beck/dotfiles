@@ -1,5 +1,0 @@
----
-- name: "K9S | MacOSX | Install"
-  community.general.homebrew:
-    name: k9s
-    state: present
