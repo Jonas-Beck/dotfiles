@@ -34,11 +34,17 @@ run = "tpack install"
 actionlint = "latest"
 crane = "latest"
 flux2 = "latest"
+"github:Azure/kubelogin" = "latest"
 "github:nklmilojevic/sofka" = "latest"
+"github:tmuxpack/tpack" = "latest"
 kustomize = "latest"
+"npm:actions-up" = "latest"
 zizmor = "latest"
 
 # TODO: Seperate macos specific configs into dedicated files - currently waiting for this to be opt-out in Mise v2027.6.0
+
+[bootstrap.brew]
+adopt = true
 
 [bootstrap.packages]
 "brew:docker" = "latest"
@@ -62,8 +68,19 @@ zizmor = "latest"
 "brew:kubernetes-cli" = "latest"
 "brew:direnv" = "latest"
 "brew-cask:copilot-cli" = "latest"
-
-# TODO: Migrate all Brewfile casks to mise native management
+"brew-cask:alacritty" = "latest"
+"brew-cask:arc" = "latest"
+"brew-cask:bruno" = "latest"
+"brew-cask:discord" = "latest"
+"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
+"brew-cask:gitify" = "latest"
+"brew-cask:karabiner-elements" = "latest"
+"brew-cask:keymapp" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:rectangle" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:spotify" = "latest"
+"brew-cask:visual-studio-code" = "latest"
 [bootstrap.hooks]
 pre-packages = [
   '''
@@ -79,9 +96,6 @@ echo "Installing Homebrew..."
 /bin/bash -c \
 	"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ''',
-  '''
-   brew bundle --file=~/dotfiles/brew/Brewfile
-   ''',
 ]
 
 [bootstrap.macos.dock]
