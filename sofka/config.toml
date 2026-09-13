@@ -1,0 +1,4 @@
+default_resource = "helmreleases"
+
+[skin]
+name = "catppuccin-mocha"

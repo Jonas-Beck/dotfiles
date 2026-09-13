@@ -1,6 +1,7 @@
 [settings]
 dotfiles.root = "~/.dotfiles"
 experimental = true
+auto_update = true
 
 
 [dotfiles]
@@ -9,6 +10,7 @@ experimental = true
 "~/.config/starship.toml" = "~/dotfiles/starship/starship.toml"
 "~/.config/alacritty/alacritty.toml" = "~/dotfiles/alacritty/alacritty.toml"
 "~/.config/k9s/" = "~/dotfiles/k9s/"
+"~/.config/sofka/" = "~/dotfiles/sofka/"
 "~/.tmux.conf" = "~/dotfiles/tmux/.tmux.conf"
 "~/.config/karabiner/karabiner.json" = "~/dotfiles/karabiner/karabiner.json"
 "~/.config/nvim/" = "~/dotfiles/nvim/"
@@ -17,6 +19,8 @@ experimental = true
 "~/Developer/VELUX/.gitconfig" = "~/dotfiles/git/.gitconfig_work"
 "~/.config/zsh/" = "~/dotfiles/zsh/zsh/"
 "~/.zshrc" = "~/dotfiles/zsh/.zshrc"
+"~/var/run/docker.sock" = "~/.config/colima/default/docker.sock"
+
 
 [bootstrap.repos]
 "~/dotfiles" = { url = "https://github.com/Jonas-Beck/dotfiles" }
@@ -25,6 +29,14 @@ experimental = true
 [tasks.bootstrap]
 description = "Install Tmux Plugins"
 run = "tpack install"
+
+[tools]
+actionlint = "latest"
+crane = "latest"
+flux2 = "latest"
+"github:nklmilojevic/sofka" = "latest"
+kustomize = "latest"
+zizmor = "latest"
 
 # TODO: Seperate macos specific configs into dedicated files - currently waiting for this to be opt-out in Mise v2027.6.0
 

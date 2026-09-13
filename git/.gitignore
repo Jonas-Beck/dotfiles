@@ -2,3 +2,5 @@
 .idea
 mise.local.toml
 .envrc
+
+**/.claude/settings.local.json
