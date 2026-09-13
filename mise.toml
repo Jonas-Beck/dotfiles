@@ -30,6 +30,33 @@ auto_update = true
 description = "Install Tmux Plugins"
 run = "tpack install"
 
+[tasks.'actions:pin']
+# TODO: Add support for file arguments
+description = "Pin GitHub Actions to full commit SHAs using actions-up"
+usage = '''
+flag "-a --min-age <days>" help="Minimum age in days for updates (default: 1, use 0 to disable)" default="1"
+'''
+run = '''
+actions-up --style sha --include-branches --min-age $usage_min_age
+'''
+dir = "{{cwd}}"
+
+[tasks.'actions:lint']
+# TODO: Add support for file arguments
+description = "Lint GitHub Actions using actionlint and zizmor"
+usage = '''
+flag "--fix <fix>" {
+  choices "all" "safe" "unsafe-only"
+  default "safe"
+}
+flag "--min-severity <severity>" {
+  choices "informational" "low" "medium" "high"
+  default "medium"
+}
+'''
+run = ['actionlint', 'zizmor .']
+dir = "{{cwd}}"
+
 [tools]
 actionlint = "latest"
 crane = "latest"
